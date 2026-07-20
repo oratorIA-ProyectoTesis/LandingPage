@@ -112,8 +112,7 @@ export function Why() {
 
         <ChunkyButton variant="glow" href="#empezar">Practicar gratis</ChunkyButton>
       </div>
-      {/* organic transition into the warm section below */}
-      <Wave color="var(--color-sala-2)" flip />
+      {/* the Anywhere section below owns the boundary wave */}
     </section>
   )
 }

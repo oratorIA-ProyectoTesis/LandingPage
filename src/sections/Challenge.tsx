@@ -9,8 +9,7 @@ import { ChunkyButton, Wave } from '../components/ui'
 export function Challenge() {
   return (
     <section className="relative overflow-hidden bg-[#17112C]">
-      {/* organic transition from the warm section above */}
-      <Wave color="var(--color-sala-2)" className="relative z-10" />
+      {/* the Anywhere section above owns the boundary wave */}
       {/* warm spotlight glow */}
       <div
         aria-hidden="true"
