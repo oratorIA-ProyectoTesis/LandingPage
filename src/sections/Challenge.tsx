@@ -4,7 +4,8 @@ import { ChunkyButton, Wave } from '../components/ui'
 /** Dark "stage" section — Modo Desafío (Duolingo's Super section). */
 export function Challenge() {
   return (
-    <section className="relative overflow-hidden bg-escenario">
+    {/* Background sampled from the desafio-vox artwork (#17112C) so the image melts into the section. */}
+    <section className="relative overflow-hidden bg-[#17112C]">
       {/* organic transition from the warm section above */}
       <Wave color="var(--color-sala-2)" className="relative z-10" />
       {/* warm spotlight glow */}
@@ -22,7 +23,7 @@ export function Challenge() {
             width={470}
             height={470}
             loading="lazy"
-            className="w-full rounded-[2.5rem] shadow-[0_24px_60px_-24px_rgba(0,0,0,0.8)] ring-1 ring-white/10"
+            className="w-full"
           />
         </div>
         <div className="flex flex-col items-center gap-6 text-center md:items-start md:text-left">
