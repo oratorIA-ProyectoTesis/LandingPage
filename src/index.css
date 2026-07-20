@@ -110,6 +110,25 @@ h4 {
   }
 }
 
+/* Handmade tape strip for the evidence notes (Why section) */
+.tape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  z-index: 2;
+  width: 58px;
+  height: 20px;
+  transform: translateX(-50%) rotate(var(--tape-tilt, -4deg));
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.35) 0 5px,
+      transparent 5px 10px
+    ),
+    var(--tape-color, rgba(255, 194, 77, 0.85));
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.25);
+}
+
 /* Glowing coral CTA — bright orange gradient, white letters (dark sections) */
 .btn-brillo {
   color: #fffdf9;
