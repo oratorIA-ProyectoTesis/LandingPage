@@ -110,6 +110,34 @@ h4 {
   }
 }
 
+/* Infinite marquee for the mobile scenario strip */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+}
+
+.marquee-track:active,
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-wrap {
+    overflow-x: auto;
+  }
+
+  .marquee-track {
+    animation: none;
+  }
+}
+
 /* Handmade tape strip for the evidence notes (Why section) */
 .tape {
   position: absolute;
