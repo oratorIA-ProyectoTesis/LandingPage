@@ -5,6 +5,8 @@ import { ClapIcon, FlameIcon, HeartIcon, SparkIcon, StarIcon, TrophyIcon } from 
 export function Anywhere() {
   return (
     <section className="relative overflow-hidden bg-sala-2 py-28">
+      {/* practice-paper grid texture */}
+      <div aria-hidden="true" className="grid-paper" />
       {/* floating brand objects */}
       <span className="absolute left-[8%] top-12 float-bob" style={{ animationDelay: '.2s' }}>
         <FlameIcon size={46} />

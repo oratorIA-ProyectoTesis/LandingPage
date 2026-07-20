@@ -110,6 +110,47 @@ h4 {
   }
 }
 
+/* Practice-paper grid texture (Anywhere section) — brand ink, very subtle */
+.grid-paper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 19px,
+      rgba(38, 32, 59, 0.05) 19px,
+      rgba(38, 32, 59, 0.05) 20px,
+      transparent 20px,
+      transparent 39px,
+      rgba(38, 32, 59, 0.05) 39px,
+      rgba(38, 32, 59, 0.05) 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 19px,
+      rgba(38, 32, 59, 0.05) 19px,
+      rgba(38, 32, 59, 0.05) 20px,
+      transparent 20px,
+      transparent 39px,
+      rgba(38, 32, 59, 0.05) 39px,
+      rgba(38, 32, 59, 0.05) 40px
+    ),
+    radial-gradient(circle at 20px 20px, rgba(38, 32, 59, 0.09) 2px, transparent 2px),
+    radial-gradient(circle at 40px 40px, rgba(38, 32, 59, 0.09) 2px, transparent 2px);
+  background-size:
+    40px 40px,
+    40px 40px,
+    40px 40px,
+    40px 40px;
+  /* fade the texture out toward the wavy edges so it never fights the waves */
+  mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, #000 55%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, #000 55%, transparent 100%);
+}
+
 /* Infinite marquee for the mobile scenario strip */
 @keyframes marquee {
   to {
