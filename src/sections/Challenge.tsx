@@ -1,10 +1,13 @@
 import desafioVox from '../assets/desafio-vox.webp'
 import { ChunkyButton, Wave } from '../components/ui'
 
-/** Dark "stage" section — Modo Desafío (Duolingo's Super section). */
+/**
+ * Dark "stage" section — Modo Desafío (Duolingo's Super section).
+ * Background #17112C sampled from the desafio-vox artwork so the image
+ * melts into the section with no visible card edge.
+ */
 export function Challenge() {
   return (
-    {/* Background sampled from the desafio-vox artwork (#17112C) so the image melts into the section. */}
     <section className="relative overflow-hidden bg-[#17112C]">
       {/* organic transition from the warm section above */}
       <Wave color="var(--color-sala-2)" className="relative z-10" />
