@@ -2,7 +2,7 @@ import productoDocentes from '../assets/producto-docentes.webp'
 /** Secondary product section — B2B educators. (The research story lives in Why.) */
 export function Products() {
   return (
-    <section className="mx-auto px-6 py-24">
+    <section id="docentes" className="mx-auto scroll-mt-20 px-6 py-24">
       <article className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2 md:gap-16">
         <div>
           <h2 className="mb-4 max-w-md text-4xl font-extrabold text-voz-deep md:text-5xl">

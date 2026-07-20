@@ -34,7 +34,7 @@ const FAQS = [
 
 export function Faq() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-24">
+    <section id="preguntas" className="mx-auto max-w-3xl scroll-mt-20 px-6 py-24">
       <img
         src={salaPregunta}
         alt="Oyente de La Sala levantando la mano con una pregunta"

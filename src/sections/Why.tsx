@@ -31,7 +31,7 @@ const EVIDENCE = [
 
 export function Why() {
   return (
-    <section className="bg-escenario">
+    <section id="metodo" className="scroll-mt-20 bg-escenario">
       {/* organic transition from the cream section above */}
       <Wave color="var(--color-sala)" />
       <div className="mx-auto max-w-6xl px-6 py-20">

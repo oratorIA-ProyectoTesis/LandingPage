@@ -69,7 +69,7 @@ const FEATURES: Feature[] = [
 /** Alternating zigzag feature sections (Duolingo style). */
 export function Features() {
   return (
-    <section className="mx-auto flex max-w-6xl flex-col gap-24 px-6 py-24">
+    <section id="como-funciona" className="mx-auto flex max-w-6xl scroll-mt-20 flex-col gap-24 px-6 py-24">
       {FEATURES.map((feature, i) => (
         <article
           key={feature.title}
