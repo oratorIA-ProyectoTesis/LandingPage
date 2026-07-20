@@ -1,4 +1,5 @@
 import productoDocentes from '../assets/producto-docentes.webp'
+import { Lively } from '../components/Lively'
 /** Secondary product section — B2B educators. (The research story lives in Why.) */
 export function Products() {
   return (
@@ -19,14 +20,16 @@ export function Products() {
           </span>
         </div>
         <div className="mx-auto w-full max-w-sm">
-          <img
-            src={productoDocentes}
-            alt="Docente mostrando el panel de progreso de su clase"
-            width={470}
-            height={470}
-            loading="lazy"
-            className="w-full drop-shadow-[0_14px_24px_rgba(38,32,59,0.12)]"
-          />
+          <Lively>
+            <img
+              src={productoDocentes}
+              alt="Docente mostrando el panel de progreso de su clase"
+              width={470}
+              height={470}
+              loading="lazy"
+              className="w-full drop-shadow-[0_14px_24px_rgba(38,32,59,0.12)]"
+            />
+          </Lively>
         </div>
       </article>
     </section>

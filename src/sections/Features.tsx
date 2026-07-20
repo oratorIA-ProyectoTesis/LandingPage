@@ -1,3 +1,4 @@
+import { Lively } from '../components/Lively'
 import featureCiencia from '../assets/feature-ciencia.webp'
 import featureProgreso from '../assets/feature-progreso.webp'
 import featureRpp from '../assets/feature-rpp.webp'
@@ -77,16 +78,21 @@ export function Features() {
         >
           <div className={`mx-auto w-full max-w-sm ${i % 2 === 1 ? 'md:order-2' : ''}`}>
             {feature.custom === 'audience' ? (
-              <AudienceGrid />
+              // The audience already bobs individually — pop-in only.
+              <Lively sway={false}>
+                <AudienceGrid />
+              </Lively>
             ) : feature.image ? (
-              <img
-                src={feature.image.src}
-                alt={feature.image.alt}
-                width={470}
-                height={470}
-                loading="lazy"
-                className="w-full drop-shadow-[0_14px_24px_rgba(38,32,59,0.12)]"
-              />
+              <Lively>
+                <img
+                  src={feature.image.src}
+                  alt={feature.image.alt}
+                  width={470}
+                  height={470}
+                  loading="lazy"
+                  className="w-full drop-shadow-[0_14px_24px_rgba(38,32,59,0.12)]"
+                />
+              </Lively>
             ) : null}
           </div>
           <div className={i % 2 === 1 ? 'md:order-1' : ''}>

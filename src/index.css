@@ -112,6 +112,55 @@ h4 {
   }
 }
 
+/* Living illustrations: playful pop-in entrance + gentle idle sway */
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) rotate(-4deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.06) rotate(1.5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.anim-pop {
+  animation: pop-in 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.anim-wait {
+  opacity: 0;
+}
+
+@keyframes idle-sway {
+  0%,
+  100% {
+    transform: rotate(-1.2deg) translateY(0);
+  }
+  50% {
+    transform: rotate(1.2deg) translateY(-7px);
+  }
+}
+
+.idle-sway {
+  animation: idle-sway 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-pop,
+  .idle-sway {
+    animation: none;
+  }
+
+  .anim-wait {
+    opacity: 1;
+  }
+}
+
 /* Practice-paper grid texture (Anywhere section) — brand ink, very subtle */
 .grid-paper {
   position: absolute;

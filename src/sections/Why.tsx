@@ -70,14 +70,16 @@ export function Why() {
               nosotros te damos un método que funciona.
             </p>
           </div>
-          <img
-            src={productoInvestigacion}
-            alt="Vox graduado con diploma, libro y lupa: la investigación detrás de OratorIA"
-            width={280}
-            height={280}
-            loading="lazy"
-            className="mx-auto w-56 drop-shadow-[0_18px_30px_rgba(0,0,0,0.4)] md:w-64"
-          />
+          <Lively className="mx-auto">
+            <img
+              src={productoInvestigacion}
+              alt="Vox graduado con diploma, libro y lupa: la ciencia detrás de OratorIA"
+              width={280}
+              height={280}
+              loading="lazy"
+              className="w-56 drop-shadow-[0_18px_30px_rgba(0,0,0,0.4)] md:w-64"
+            />
+          </Lively>
         </div>
 
         <div className="mb-14 grid gap-7 pt-4 sm:grid-cols-2 lg:grid-cols-4">
