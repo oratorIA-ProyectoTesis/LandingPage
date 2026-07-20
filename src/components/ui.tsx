@@ -56,7 +56,9 @@ export function Wave({
       viewBox="0 0 1440 90"
       preserveAspectRatio="none"
       aria-hidden="true"
-      className={`block h-14 w-full md:h-24 ${flip ? 'rotate-180' : ''} ${className}`}
+      // 1px overlap kills the sub-pixel hairline between the svg and the
+      // neighboring section (fractional height rounding).
+      className={`block h-14 w-full md:h-24 ${flip ? '-mb-px rotate-180' : '-mt-px'} ${className}`}
     >
       <path
         d="M0 52 C 200 92 420 8 720 42 C 1020 76 1240 14 1440 48 L1440 0 L0 0 Z"
