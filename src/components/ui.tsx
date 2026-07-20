@@ -31,6 +31,35 @@ export function ChunkyButton({ variant = 'primary', children, className = '', ..
   )
 }
 
+/**
+ * Organic wave divider between sections (Duolingo-style transitions).
+ * Place at the TOP of a section filled with the PREVIOUS section's color,
+ * or flipped at the BOTTOM filled with the NEXT section's color.
+ */
+export function Wave({
+  color,
+  flip = false,
+  className = '',
+}: {
+  color: string
+  flip?: boolean
+  className?: string
+}) {
+  return (
+    <svg
+      viewBox="0 0 1440 90"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+      className={`block h-14 w-full md:h-24 ${flip ? 'rotate-180' : ''} ${className}`}
+    >
+      <path
+        d="M0 52 C 200 92 420 8 720 42 C 1020 76 1240 14 1440 48 L1440 0 L0 0 Z"
+        fill={color}
+      />
+    </svg>
+  )
+}
+
 /** Slot for an illustration that is not generated yet (see SVGS-NECESARIOS.md). */
 export function IllustrationSlot({ name, ratio = 'aspect-square' }: { name: string; ratio?: string }) {
   return (

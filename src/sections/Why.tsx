@@ -1,5 +1,5 @@
 import productoInvestigacion from '../assets/producto-investigacion.webp'
-import { ChunkyButton } from '../components/ui'
+import { ChunkyButton, Wave } from '../components/ui'
 
 /**
  * "Why OratorIA" — institutional credibility narrative (Blackboard pattern).
@@ -31,8 +31,10 @@ const EVIDENCE = [
 
 export function Why() {
   return (
-    <section className="bg-escenario py-24">
-      <div className="mx-auto max-w-6xl px-6">
+    <section className="bg-escenario">
+      {/* organic transition from the cream section above */}
+      <Wave color="var(--color-sala)" />
+      <div className="mx-auto max-w-6xl px-6 py-20">
         <div className="mb-12 grid items-center gap-10 md:grid-cols-[1fr_auto]">
           <div>
             <p className="mb-3 font-display text-sm font-extrabold tracking-[0.3em] text-desafio uppercase">
@@ -72,6 +74,8 @@ export function Why() {
 
         <ChunkyButton variant="white">Conocer el método</ChunkyButton>
       </div>
+      {/* organic transition into the warm section below */}
+      <Wave color="var(--color-sala-2)" flip />
     </section>
   )
 }

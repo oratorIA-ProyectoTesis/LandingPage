@@ -25,3 +25,5 @@ dist-ssr
 
 # Raw/unoptimized source assets (kept local only)
 src/assets/_originales/
+
+.vercel
