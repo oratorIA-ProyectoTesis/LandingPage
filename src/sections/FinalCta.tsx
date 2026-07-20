@@ -5,33 +5,38 @@ import { ClapIcon, FlameIcon, HeartIcon, StarIcon, TrophyIcon } from '../compone
 /** Final CTA over the coral wave, mascot center (Duolingo's closing section). */
 export function FinalCta() {
   return (
-    <section className="relative overflow-hidden bg-sala pt-24">
+    <section id="empezar" className="relative scroll-mt-20 overflow-hidden bg-sala pt-24">
       <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center gap-7 px-6 text-center">
         <h2 className="text-5xl font-extrabold text-escenario md:text-6xl">
           habla. te escuchan.
           <br />
-          <span className="text-voz">mejoras.</span>
+          <span className="text-voz-deep">mejoras.</span>
         </h2>
         {/* Research: email-only form + ONE trust microcopy near the CTA. */}
         <form
-          className="flex w-full max-w-md flex-col gap-3 sm:flex-row"
+          className="flex w-full max-w-md flex-col gap-2"
           onSubmit={(e) => e.preventDefault()}
         >
-          <label htmlFor="cta-email" className="sr-only">
+          <label
+            htmlFor="cta-email"
+            className="text-left font-display text-sm font-bold text-escenario/80"
+          >
             Tu correo
           </label>
-          <input
-            id="cta-email"
-            type="email"
-            required
-            placeholder="tu@correo.edu.pe"
-            className="w-full rounded-2xl border-2 border-sala-2 bg-white px-5 py-3.5 font-semibold text-escenario placeholder:text-escenario/35 focus:border-voz focus:outline-none"
-          />
-          <ChunkyButton variant="primary" className="shrink-0">
-            Empezar gratis
-          </ChunkyButton>
+          <div className="flex w-full flex-col gap-3 sm:flex-row">
+            <input
+              id="cta-email"
+              type="email"
+              required
+              placeholder="tu@correo.edu.pe"
+              className="w-full rounded-2xl border-2 border-sala-2 bg-white px-5 py-3.5 font-semibold text-escenario placeholder:text-escenario/40 focus:border-voz focus:outline-none"
+            />
+            <ChunkyButton variant="primary" className="shrink-0">
+              Practicar gratis
+            </ChunkyButton>
+          </div>
         </form>
-        <p className="text-sm font-semibold text-escenario/50">
+        <p className="text-sm font-semibold text-escenario/60">
           Sin tarjeta de crédito — solo tu correo.
         </p>
       </div>

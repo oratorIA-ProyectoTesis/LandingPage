@@ -34,7 +34,7 @@ export function Anywhere() {
           virtual, sin instalar nada, sin público real que te juzgue — tu video
           nunca sale de tu computadora.
         </p>
-        <ChunkyButton variant="primary">Practicar gratis</ChunkyButton>
+        <ChunkyButton variant="primary" href="#empezar">Practicar gratis</ChunkyButton>
       </div>
     </section>
   )

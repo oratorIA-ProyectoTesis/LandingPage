@@ -90,7 +90,7 @@ export function Features() {
             ) : null}
           </div>
           <div className={i % 2 === 1 ? 'md:order-1' : ''}>
-            <h2 className="mb-4 max-w-md text-4xl font-extrabold text-voz md:text-5xl">
+            <h2 className="mb-4 max-w-md text-4xl font-extrabold text-voz-deep md:text-5xl">
               {feature.title}
             </h2>
             <p className="max-w-md text-lg leading-relaxed text-escenario/60">{feature.body}</p>

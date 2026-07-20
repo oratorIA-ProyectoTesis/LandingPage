@@ -67,12 +67,12 @@ export function Why() {
                 {tag}
               </p>
               <h3 className="mb-2 font-display text-lg font-bold text-white">{title}</h3>
-              <p className="text-sm leading-relaxed text-white/60">{detail}</p>
+              <p className="text-sm leading-relaxed text-white/75">{detail}</p>
             </article>
           ))}
         </div>
 
-        <ChunkyButton variant="white">Conocer el método</ChunkyButton>
+        <ChunkyButton variant="primary" href="#empezar">Practicar gratis</ChunkyButton>
       </div>
       {/* organic transition into the warm section below */}
       <Wave color="var(--color-sala-2)" flip />

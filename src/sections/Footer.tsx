@@ -31,9 +31,10 @@ export function Footer() {
             <ul className="flex flex-col gap-2.5">
               {col.links.map((link) => (
                 <li key={link}>
+                  {/* Brand rule: ink text over coral (AA contrast) */}
                   <a
                     href="#empezar"
-                    className="text-sm font-semibold text-white/75 transition-colors hover:text-white"
+                    className="text-sm font-bold text-escenario/80 transition-colors hover:text-escenario"
                   >
                     {link}
                   </a>
@@ -43,7 +44,7 @@ export function Footer() {
           </nav>
         ))}
       </div>
-      <div className="mx-auto mt-16 max-w-6xl border-t border-white/25 px-6 pt-6 text-sm font-semibold text-white/70">
+      <div className="mx-auto mt-16 max-w-6xl border-t border-escenario/20 px-6 pt-6 text-sm font-bold text-escenario/80">
         OratorIA — no entrena presentaciones, entrena tu competencia oral.
       </div>
     </footer>

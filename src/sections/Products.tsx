@@ -1,13 +1,11 @@
 import productoDocentes from '../assets/producto-docentes.webp'
-import { ChunkyButton } from '../components/ui'
-
 /** Secondary product section — B2B educators. (The research story lives in Why.) */
 export function Products() {
   return (
     <section className="mx-auto px-6 py-24">
       <article className="mx-auto grid max-w-6xl items-center gap-10 md:grid-cols-2 md:gap-16">
         <div>
-          <h2 className="mb-4 max-w-md text-4xl font-extrabold text-voz md:text-5xl">
+          <h2 className="mb-4 max-w-md text-4xl font-extrabold text-voz-deep md:text-5xl">
             oratorIA para docentes
           </h2>
           <p className="mb-6 max-w-md text-lg leading-relaxed text-escenario/60">
@@ -15,7 +13,10 @@ export function Products() {
             antes de la sustentación. Asigna escenarios, sigue el progreso por
             dimensión y llega al día D con menos nervios en el aula.
           </p>
-          <ChunkyButton variant="ghost">Próximamente</ChunkyButton>
+          {/* Badge, not a button — a dead button invites clicks it can't honor. */}
+          <span className="inline-block rounded-full bg-uva/10 px-5 py-2 font-display text-sm font-extrabold tracking-widest text-uva uppercase">
+            Próximamente
+          </span>
         </div>
         <div className="mx-auto w-full max-w-sm">
           <img

@@ -43,7 +43,7 @@ export function Faq() {
         loading="lazy"
         className="mx-auto mb-4 w-28 float-bob"
       />
-      <p className="mb-3 text-center font-display text-sm font-extrabold tracking-[0.3em] text-voz uppercase">
+      <p className="mb-3 text-center font-display text-sm font-extrabold tracking-[0.3em] text-voz-deep uppercase">
         Preguntas frecuentes
       </p>
       <h2 className="mb-12 text-center text-4xl font-extrabold text-escenario md:text-5xl">
@@ -63,7 +63,7 @@ export function Faq() {
                 <path d="M5 8l5 5 5-5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </summary>
-            <p className="mt-3 max-w-xl leading-relaxed text-escenario/60">{a}</p>
+            <p className="mt-3 max-w-xl leading-relaxed text-escenario/75">{a}</p>
           </details>
         ))}
       </div>

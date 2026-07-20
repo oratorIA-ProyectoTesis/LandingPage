@@ -16,16 +16,22 @@ const variants: Record<ChunkyVariant, string> = {
 interface ChunkyButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ChunkyVariant
   children: ReactNode
+  /** Renders as an anchor when provided (CTA wiring). */
+  href?: string
 }
 
 /** Signature 3D "chunky" button (brand board). */
-export function ChunkyButton({ variant = 'primary', children, className = '', ...rest }: ChunkyButtonProps) {
+export function ChunkyButton({ variant = 'primary', children, className = '', href, ...rest }: ChunkyButtonProps) {
+  const cls = `inline-block cursor-pointer rounded-2xl px-8 py-3.5 text-center font-display text-sm font-extrabold tracking-widest uppercase transition-transform active:translate-y-1 ${variants[variant]} ${className}`
+  if (href) {
+    return (
+      <a href={href} className={cls}>
+        {children}
+      </a>
+    )
+  }
   return (
-    <button
-      type="button"
-      className={`inline-block cursor-pointer rounded-2xl px-8 py-3.5 font-display text-sm font-extrabold tracking-widest uppercase transition-transform active:translate-y-1 ${variants[variant]} ${className}`}
-      {...rest}
-    >
+    <button type="button" className={cls} {...rest}>
       {children}
     </button>
   )

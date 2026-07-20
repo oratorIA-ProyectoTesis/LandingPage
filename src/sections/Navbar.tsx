@@ -11,17 +11,11 @@ export function Navbar() {
             Orator<span className="text-voz">IA</span>
           </span>
         </a>
-        <div className="flex items-center gap-6">
-          <a
-            href="#empezar"
-            className="hidden font-display text-sm font-bold tracking-widest text-uva uppercase transition-colors hover:text-voz sm:block"
-          >
-            Iniciar sesión
-          </a>
-          <ChunkyButton variant="primary" className="!px-5 !py-2.5 !text-xs">
-            Practicar gratis
-          </ChunkyButton>
-        </div>
+        {/* "Iniciar sesión" oculto hasta que exista auth real — un enlace que
+            promete login y lleva al registro quema confianza. */}
+        <ChunkyButton variant="primary" href="#empezar" className="!px-5 !py-2.5 !text-xs">
+          Practicar gratis
+        </ChunkyButton>
       </nav>
     </header>
   )
