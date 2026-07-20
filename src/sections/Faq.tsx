@@ -19,7 +19,7 @@ const FAQS = [
     a: 'Ese es el corazón de OratorIA: su modelo pedagógico prioriza. Al cerrar cada segmento recibes UNA corrección — la que más te ayuda ahora — con su porqué, un ejemplo y un ejercicio.',
   },
   {
-    q: '¿Sirve para mi sustentación de tesis?',
+    q: '¿Sirve para mi sustentación?',
     a: 'Sí — es nuestro escenario estrella. También puedes practicar exposiciones de clase, pitches y discursos, con la duración que tú definas.',
   },
   {

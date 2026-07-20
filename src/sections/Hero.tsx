@@ -55,7 +55,7 @@ export function Hero() {
               <path d="M12 3 2 8l10 5 10-5-10-5z" fill="#6C5AA6" />
               <path d="M6 10.5V15c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5" fill="none" stroke="#6C5AA6" strokeWidth="2" />
             </svg>
-            Nacido de una investigación universitaria
+            Método respaldado por la ciencia
           </li>
         </ul>
       </div>

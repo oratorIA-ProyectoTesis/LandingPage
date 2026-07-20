@@ -4,7 +4,7 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
     links: [
       { label: 'Misión', href: '#metodo' },
       { label: 'Método RPP', href: '#metodo' },
-      { label: 'Investigación', href: '#metodo' },
+      { label: 'La ciencia detrás', href: '#metodo' },
       { label: 'Cómo funciona', href: '#como-funciona' },
     ],
   },
@@ -19,7 +19,7 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: 'Escenarios',
     links: [
-      { label: 'Sustentación de tesis', href: '#empezar' },
+      { label: 'Sustentación', href: '#empezar' },
       { label: 'Pitch', href: '#empezar' },
       { label: 'Exposición en clase', href: '#empezar' },
     ],

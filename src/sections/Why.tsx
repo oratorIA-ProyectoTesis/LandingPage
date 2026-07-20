@@ -24,8 +24,8 @@ const EVIDENCE = [
   },
   {
     tag: 'Validación',
-    title: 'Experimento real con estudiantes',
-    detail: 'OratorIA se valida con un estudio A/B y una rúbrica evaluada por expertos.',
+    title: 'Probado con estudiantes reales',
+    detail: 'Tu avance se mide con una rúbrica evaluada por expertos — resultados que puedes ver, no promesas.',
   },
 ] as const
 
@@ -44,10 +44,10 @@ export function Why() {
               No adivinamos cómo se enseña a hablar. Lo investigamos.
             </h2>
             <p className="max-w-2xl text-lg text-white/70">
-              OratorIA nace de una tesis de Ingeniería de Software: cada decisión
-              del producto — qué corregir, cuándo callar, cómo reacciona tu
-              público — está respaldada por evidencia publicada, no por
-              ocurrencias.
+              Cada decisión de OratorIA — qué corregir primero, cuándo callar,
+              cómo reacciona tu público — está construida sobre más de 50 años
+              de ciencia del aprendizaje. Otros te dan consejos genéricos;
+              nosotros te damos un método que funciona.
             </p>
           </div>
           <img
