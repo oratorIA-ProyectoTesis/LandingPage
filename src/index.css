@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/*
+ * OratorIA brand tokens — "Spotlight" system (canonical).
+ * Source of truth: Obsidian vault > 09 - Producto > Branding.md
+ */
+@theme {
+  /* Brand palette */
+  --color-voz: #ff6a3d; /* coral — primary, CTAs, brand */
+  --color-voz-deep: #d9431c; /* pressed / 3D button shadow */
+  --color-voz-soft: #ffe6dc; /* soft tint backgrounds */
+  --color-escenario: #26203b; /* ink — strong text, dark surfaces */
+  --color-uva: #6c5aa6; /* secondary accent, links */
+  --color-sala: #fffdf9; /* warm canvas */
+  --color-sala-2: #fff4ea; /* raised warm surface */
+  --color-apoyo: #12b8a4; /* teal — support mode (functional) */
+  --color-apoyo-deep: #0b8576;
+  --color-desafio: #ffc24d; /* amber — challenge mode (functional) */
+  --color-desafio-deep: #e39a16;
+  --color-confianza: #ff5c7a; /* hearts / lives */
+
+  /* Typography */
+  --font-display: "Baloo 2", cursive;
+  --font-sans: "Hanken Grotesk", system-ui, sans-serif;
+  --font-editorial: "Fraunces", serif;
+}
+
+body {
+  background-color: var(--color-sala);
+  color: var(--color-escenario);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+}
+
+/* Floating decorative elements (hero / CTA sections) */
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.float-bob {
+  animation: bob 3.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-bob {
+    animation: none;
+  }
+}
