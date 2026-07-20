@@ -14,7 +14,7 @@ export function Challenge() {
       {/* warm spotlight glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full opacity-40"
+        className="pointer-events-none absolute -top-32 left-[64%] h-96 w-96 -translate-x-1/2 rounded-full opacity-40"
         style={{ background: 'radial-gradient(circle, #FF6A3D 0%, transparent 65%)' }}
       />
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2">
@@ -27,6 +27,14 @@ export function Challenge() {
             height={470}
             loading="lazy"
             className="w-full"
+            style={{
+              // Edge fade: the artwork has its own vignette, so a flat color
+              // can never match the corners — fading the borders hides them.
+              maskImage:
+                'radial-gradient(ellipse 72% 72% at 50% 50%, #000 55%, transparent 97%)',
+              WebkitMaskImage:
+                'radial-gradient(ellipse 72% 72% at 50% 50%, #000 55%, transparent 97%)',
+            }}
           />
         </div>
         <div className="flex flex-col items-center gap-6 text-center md:items-start md:text-left">
