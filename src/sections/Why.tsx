@@ -1,4 +1,5 @@
 import productoInvestigacion from '../assets/producto-investigacion.webp'
+import { Lively } from '../components/Lively'
 import { ChunkyButton, Wave } from '../components/ui'
 
 /**
