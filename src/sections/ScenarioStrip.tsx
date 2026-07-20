@@ -17,8 +17,11 @@ const SCENARIOS = [
 /** Horizontal strip of practice scenarios (Duolingo's language strip). */
 export function ScenarioStrip() {
   return (
-    <div className="border-y border-sala-2 bg-sala">
+    <div className="border-y border-sala-2 bg-sala-2/50">
       <ul className="no-scrollbar mx-auto flex max-w-6xl snap-x items-center gap-8 overflow-x-auto px-6 py-4 md:justify-center">
+        <li className="shrink-0 font-display text-sm font-extrabold tracking-widest text-escenario/40 uppercase">
+          Practica para:
+        </li>
         {SCENARIOS.map(({ icon, emoji, label }) => (
           <li key={label} className="shrink-0">
             <span className="flex items-center gap-2.5 font-display text-sm font-bold tracking-widest text-escenario/50 uppercase transition-colors hover:text-voz">

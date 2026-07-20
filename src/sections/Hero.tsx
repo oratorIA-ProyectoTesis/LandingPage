@@ -41,6 +41,23 @@ export function Hero() {
         <ChunkyButton variant="primary" href="#empezar" className="w-full max-w-xs">
           Practicar gratis
         </ChunkyButton>
+        {/* Compact trust signals next to the CTA (the rest live in the Why section). */}
+        <ul className="flex flex-col gap-2 text-sm font-semibold text-escenario/60 sm:flex-row sm:gap-6">
+          <li className="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="4.5" y="10" width="15" height="10.5" rx="3" fill="#12B8A4" />
+              <path d="M8 10V7.5a4 4 0 0 1 8 0V10" stroke="#12B8A4" strokeWidth="2.4" fill="none" />
+            </svg>
+            Tu video nunca sale de tu laptop
+          </li>
+          <li className="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3 2 8l10 5 10-5-10-5z" fill="#6C5AA6" />
+              <path d="M6 10.5V15c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5" fill="none" stroke="#6C5AA6" strokeWidth="2" />
+            </svg>
+            Nacido de una investigación universitaria
+          </li>
+        </ul>
       </div>
     </section>
   )

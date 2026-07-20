@@ -1,6 +1,5 @@
 import { Navbar } from './sections/Navbar'
 import { Hero } from './sections/Hero'
-import { TrustStrip } from './sections/TrustStrip'
 import { ScenarioStrip } from './sections/ScenarioStrip'
 import { Features } from './sections/Features'
 import { Why } from './sections/Why'
@@ -21,7 +20,6 @@ function App() {
       <Navbar />
       <main>
         <Hero />
-        <TrustStrip />
         <ScenarioStrip />
         <Features />
         <Why />
