@@ -70,6 +70,46 @@ h4 {
   }
 }
 
+/* Stage CTA — amber-coral gradient with spotlight glow (Modo Desafío) */
+.btn-desafio {
+  --db-amber: #ffc24d;
+  --db-coral: #ff6a3d;
+  color: #26203b;
+  background-size: 280% auto;
+  background-image: linear-gradient(
+    325deg,
+    var(--db-coral) 0%,
+    var(--db-amber) 55%,
+    var(--db-coral) 90%
+  );
+  box-shadow:
+    0 0 22px rgba(255, 194, 77, 0.45),
+    0 5px 5px -1px rgba(217, 67, 28, 0.4),
+    inset 4px 4px 8px rgba(255, 232, 190, 0.5),
+    inset -4px -4px 8px rgba(217, 67, 28, 0.35);
+  transition:
+    background-position 0.8s,
+    transform 0.04s ease;
+}
+
+.btn-desafio:hover {
+  background-position: right top;
+}
+
+.btn-desafio:is(:focus-visible, :active) {
+  outline: none;
+  box-shadow:
+    0 0 0 3px #17112c,
+    0 0 0 6px var(--db-amber),
+    0 0 22px rgba(255, 194, 77, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-desafio {
+    transition: none;
+  }
+}
+
 /* Slow breathing glow for stage lights (Challenge section) */
 @keyframes glow-pulse {
   0%,

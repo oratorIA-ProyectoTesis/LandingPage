@@ -54,7 +54,7 @@ export function Challenge() {
             difíciles, miradas firmes y menos tiempo. Entrena bajo presión —
             para que el día real se sienta fácil.
           </p>
-          <ChunkyButton variant="white" href="#empezar">Probar el modo desafío</ChunkyButton>
+          <ChunkyButton variant="stage" href="#empezar">Probar el modo desafío</ChunkyButton>
         </div>
       </div>
       {/* organic transition into the cream section below */}
