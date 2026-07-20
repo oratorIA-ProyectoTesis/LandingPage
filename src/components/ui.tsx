@@ -1,6 +1,6 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react'
 
-type ChunkyVariant = 'primary' | 'ghost' | 'white' | 'dark' | 'stage'
+type ChunkyVariant = 'primary' | 'ghost' | 'white' | 'dark' | 'stage' | 'glow'
 
 const variants: Record<ChunkyVariant, string> = {
   primary:
@@ -13,6 +13,8 @@ const variants: Record<ChunkyVariant, string> = {
     'bg-escenario text-white shadow-[0_5px_0_rgba(0,0,0,0.4)] active:shadow-[0_1px_0_rgba(0,0,0,0.4)]',
   /* Gradient spotlight CTA for the dark stage section (see .btn-desafio). */
   stage: 'btn-desafio',
+  /* Bright coral gradient with white letters for dark sections (see .btn-brillo). */
+  glow: 'btn-brillo',
 }
 
 interface ChunkyButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

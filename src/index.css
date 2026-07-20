@@ -110,6 +110,45 @@ h4 {
   }
 }
 
+/* Glowing coral CTA — bright orange gradient, white letters (dark sections) */
+.btn-brillo {
+  color: #fffdf9;
+  background-size: 280% auto;
+  background-image: linear-gradient(
+    325deg,
+    #d9431c 0%,
+    #ff6a3d 45%,
+    #ff8a5c 60%,
+    #ff6a3d 90%
+  );
+  box-shadow:
+    0 0 24px rgba(255, 106, 61, 0.55),
+    0 5px 5px -1px rgba(217, 67, 28, 0.45),
+    inset 4px 4px 8px rgba(255, 190, 160, 0.45),
+    inset -4px -4px 8px rgba(170, 40, 8, 0.4);
+  transition:
+    background-position 0.8s,
+    transform 0.04s ease;
+}
+
+.btn-brillo:hover {
+  background-position: right top;
+}
+
+.btn-brillo:is(:focus-visible, :active) {
+  outline: none;
+  box-shadow:
+    0 0 0 3px #26203b,
+    0 0 0 6px #ff6a3d,
+    0 0 24px rgba(255, 106, 61, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-brillo {
+    transition: none;
+  }
+}
+
 /* Slow breathing glow for stage lights (Challenge section) */
 @keyframes glow-pulse {
   0%,

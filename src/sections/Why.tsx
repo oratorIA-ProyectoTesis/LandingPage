@@ -72,7 +72,7 @@ export function Why() {
           ))}
         </div>
 
-        <ChunkyButton variant="primary" href="#empezar">Practicar gratis</ChunkyButton>
+        <ChunkyButton variant="glow" href="#empezar">Practicar gratis</ChunkyButton>
       </div>
       {/* organic transition into the warm section below */}
       <Wave color="var(--color-sala-2)" flip />
