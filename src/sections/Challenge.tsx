@@ -17,15 +17,6 @@ export function Challenge() {
         className="glow-pulse pointer-events-none absolute -top-32 left-[64%] h-[28rem] w-[28rem] -translate-x-1/2 rounded-full"
         style={{ background: 'radial-gradient(circle, #FF6A3D 0%, transparent 65%)' }}
       />
-      {/* amber halo continuing Vox's spotlight on the artwork side */}
-      <div
-        aria-hidden="true"
-        className="glow-pulse pointer-events-none absolute top-1/4 left-[22%] h-96 w-96 -translate-x-1/2 rounded-full"
-        style={{
-          background: 'radial-gradient(circle, rgba(255,194,77,0.55) 0%, transparent 62%)',
-          animationDelay: '2.5s',
-        }}
-      />
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2">
         <div className="mx-auto w-full max-w-sm">
           {/* Dark scene blends with the section background on purpose. */}
@@ -37,12 +28,14 @@ export function Challenge() {
             loading="lazy"
             className="w-full"
             style={{
-              // Edge fade: the artwork has its own vignette, so a flat color
-              // can never match the corners — fading the borders hides them.
+              // Aggressive dissolve: melt the artwork's own background gradient
+              // completely before any edge, so only the scene (Vox, podium,
+              // audience, beam) floats in the section darkness — it should
+              // never read as a rectangular image.
               maskImage:
-                'radial-gradient(ellipse 72% 72% at 50% 50%, #000 55%, transparent 97%)',
+                'radial-gradient(ellipse 60% 68% at 50% 46%, #000 40%, transparent 78%)',
               WebkitMaskImage:
-                'radial-gradient(ellipse 72% 72% at 50% 50%, #000 55%, transparent 97%)',
+                'radial-gradient(ellipse 60% 68% at 50% 46%, #000 40%, transparent 78%)',
             }}
           />
         </div>
