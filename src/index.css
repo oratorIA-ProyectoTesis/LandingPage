@@ -70,6 +70,28 @@ h4 {
   }
 }
 
+/* Slow breathing glow for stage lights (Challenge section) */
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.75;
+  }
+}
+
+.glow-pulse {
+  animation: glow-pulse 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-pulse {
+    animation: none;
+    opacity: 0.55;
+  }
+}
+
 /* Horizontal scroll without visible scrollbar (mobile strips) */
 .no-scrollbar {
   scrollbar-width: none;

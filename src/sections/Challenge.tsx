@@ -14,8 +14,17 @@ export function Challenge() {
       {/* warm spotlight glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-32 left-[64%] h-96 w-96 -translate-x-1/2 rounded-full opacity-40"
+        className="glow-pulse pointer-events-none absolute -top-32 left-[64%] h-[28rem] w-[28rem] -translate-x-1/2 rounded-full"
         style={{ background: 'radial-gradient(circle, #FF6A3D 0%, transparent 65%)' }}
+      />
+      {/* amber halo continuing Vox's spotlight on the artwork side */}
+      <div
+        aria-hidden="true"
+        className="glow-pulse pointer-events-none absolute top-1/4 left-[22%] h-96 w-96 -translate-x-1/2 rounded-full"
+        style={{
+          background: 'radial-gradient(circle, rgba(255,194,77,0.55) 0%, transparent 62%)',
+          animationDelay: '2.5s',
+        }}
       />
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2">
         <div className="mx-auto w-full max-w-sm">
@@ -38,11 +47,14 @@ export function Challenge() {
           />
         </div>
         <div className="flex flex-col items-center gap-6 text-center md:items-start md:text-left">
-          <p className="font-display text-sm font-extrabold tracking-[0.3em] text-desafio uppercase">
+          <p className="font-display text-sm font-extrabold tracking-[0.3em] text-desafio uppercase [text-shadow:0_0_18px_rgba(255,194,77,0.45)]">
             Sube al escenario con
           </p>
           <h2 className="font-display text-5xl font-extrabold text-white md:text-6xl">
-            MODO <span className="text-desafio">DESAFÍO</span>
+            MODO{' '}
+            <span className="text-desafio [text-shadow:0_0_32px_rgba(255,194,77,0.65),0_0_80px_rgba(255,194,77,0.35)]">
+              DESAFÍO
+            </span>
           </h2>
           <p className="max-w-md text-lg text-white/70">
             Cuando estés listo, tu público sube la exigencia: preguntas
