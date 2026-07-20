@@ -1,23 +1,39 @@
-const COLUMNS: { title: string; links: string[] }[] = [
+const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: 'Sobre OratorIA',
-    links: ['Misión', 'Método RPP', 'Investigación', 'La rúbrica', 'Contáctanos'],
+    links: [
+      { label: 'Misión', href: '#metodo' },
+      { label: 'Método RPP', href: '#metodo' },
+      { label: 'Investigación', href: '#metodo' },
+      { label: 'Cómo funciona', href: '#como-funciona' },
+    ],
   },
   {
     title: 'Producto',
-    links: ['La Sala', 'Modo desafío', 'Reportes', 'Para docentes'],
+    links: [
+      { label: 'La Sala', href: '#como-funciona' },
+      { label: 'Modo desafío', href: '#metodo' },
+      { label: 'Para docentes', href: '#docentes' },
+    ],
   },
   {
     title: 'Escenarios',
-    links: ['Sustentación de tesis', 'Pitch', 'Exposición en clase'],
+    links: [
+      { label: 'Sustentación de tesis', href: '#empezar' },
+      { label: 'Pitch', href: '#empezar' },
+      { label: 'Exposición en clase', href: '#empezar' },
+    ],
   },
   {
     title: 'Ayuda y soporte',
-    links: ['Preguntas frecuentes', 'Requisitos técnicos', 'Estado del servicio'],
+    links: [
+      { label: 'Preguntas frecuentes', href: '#preguntas' },
+      { label: 'Empezar gratis', href: '#empezar' },
+    ],
   },
   {
     title: 'Privacidad',
-    links: ['Tu video nunca sale de tu laptop', 'Términos', 'Privacidad (Ley 29733)'],
+    links: [{ label: 'Tu video nunca sale de tu laptop', href: '#preguntas' }],
   },
 ]
 
@@ -29,14 +45,14 @@ export function Footer() {
           <nav key={col.title} aria-label={col.title}>
             <h3 className="mb-4 font-display text-base font-extrabold text-white">{col.title}</h3>
             <ul className="flex flex-col gap-2.5">
-              {col.links.map((link) => (
-                <li key={link}>
+              {col.links.map(({ label, href }) => (
+                <li key={label}>
                   {/* Brand rule: ink text over coral (AA contrast) */}
                   <a
-                    href="#empezar"
+                    href={href}
                     className="text-sm font-bold text-escenario/80 transition-colors hover:text-escenario"
                   >
-                    {link}
+                    {label}
                   </a>
                 </li>
               ))}
