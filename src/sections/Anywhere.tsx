@@ -1,5 +1,12 @@
 import { ChunkyButton, Wave } from '../components/ui'
-import { ClapIcon, FlameIcon, HeartIcon, SparkIcon, StarIcon, TrophyIcon } from '../components/icons'
+import {
+  DoodleArrow,
+  DoodleCircle,
+  DoodleSpiral,
+  DoodleStar,
+  DoodleSun,
+  DoodleZigzag,
+} from '../components/doodles'
 
 /**
  * Full-bleed section: practice anywhere, no special hardware.
@@ -16,24 +23,24 @@ export function Anywhere() {
       <Wave color="var(--color-escenario)" className="relative z-10" />
 
       <div className="relative py-16">
-        {/* floating brand objects */}
-        <span className="absolute left-[8%] top-2 float-bob" style={{ animationDelay: '.2s' }}>
-          <FlameIcon size={46} />
+        {/* static pen doodles — margin scribbles on the notebook page */}
+        <span className="absolute left-[7%] top-4 hidden -rotate-12 opacity-70 sm:block">
+          <DoodleSpiral />
         </span>
-        <span className="absolute right-[10%] top-6 float-bob" style={{ animationDelay: '.9s' }}>
-          <TrophyIcon size={48} />
+        <span className="absolute right-[8%] top-8 hidden rotate-6 opacity-70 sm:block">
+          <DoodleStar />
         </span>
-        <span className="absolute left-[16%] bottom-4 float-bob" style={{ animationDelay: '1.4s' }}>
-          <ClapIcon size={42} />
+        <span className="absolute left-[13%] bottom-8 hidden rotate-3 opacity-70 sm:block">
+          <DoodleArrow />
         </span>
-        <span className="absolute right-[18%] bottom-2 float-bob" style={{ animationDelay: '.5s' }}>
-          <HeartIcon size={38} />
+        <span className="absolute right-[14%] bottom-6 hidden -rotate-6 opacity-70 sm:block">
+          <DoodleZigzag />
         </span>
-        <span className="absolute left-[38%] -bottom-2 float-bob" style={{ animationDelay: '1.9s' }}>
-          <StarIcon size={34} />
+        <span className="absolute left-[30%] -top-1 hidden rotate-12 opacity-60 lg:block">
+          <DoodleSun size={34} />
         </span>
-        <span className="absolute right-[36%] -top-2 float-bob" style={{ animationDelay: '1.1s' }}>
-          <SparkIcon size={30} />
+        <span className="absolute right-[28%] -bottom-3 hidden -rotate-3 opacity-70 lg:block">
+          <DoodleCircle />
         </span>
 
         <div className="relative mx-auto flex max-w-3xl flex-col items-center gap-8 px-6 text-center">
