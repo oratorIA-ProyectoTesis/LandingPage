@@ -11,11 +11,6 @@ export function Challenge() {
     <section className="relative overflow-hidden bg-[#17112C]">
       {/* the Anywhere section above owns the boundary wave */}
       {/* warm spotlight glow */}
-      <div
-        aria-hidden="true"
-        className="glow-pulse pointer-events-none absolute -top-32 left-[64%] h-[28rem] w-[28rem] -translate-x-1/2 rounded-full"
-        style={{ background: 'radial-gradient(circle, #FF6A3D 0%, transparent 65%)' }}
-      />
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2">
         <div className="mx-auto w-full max-w-sm">
           {/* Dark scene blends with the section background on purpose. */}
