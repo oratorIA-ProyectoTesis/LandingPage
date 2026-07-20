@@ -136,6 +136,48 @@ h4 {
   opacity: 0;
 }
 
+/* Character hop: squash & stretch celebration jump (animator physics) */
+@keyframes hop {
+  0%,
+  52%,
+  100% {
+    transform: translateY(0) scale(1, 1);
+  }
+  56% {
+    /* anticipation: crouch */
+    transform: translateY(2px) scale(1.06, 0.9);
+  }
+  63% {
+    /* jump: stretch */
+    transform: translateY(-26px) scale(0.94, 1.08);
+  }
+  70% {
+    /* landing: squash */
+    transform: translateY(0) scale(1.1, 0.86);
+  }
+  76% {
+    /* happy second hop */
+    transform: translateY(-11px) scale(0.98, 1.05);
+  }
+  82% {
+    transform: translateY(0) scale(1.05, 0.94);
+  }
+  88% {
+    transform: translateY(0) scale(1, 1);
+  }
+}
+
+.anim-hop {
+  animation: hop 4.6s ease-in-out infinite;
+  transform-origin: 50% 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-hop {
+    animation: none;
+  }
+}
+
 @keyframes idle-sway {
   0%,
   100% {

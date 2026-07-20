@@ -146,6 +146,56 @@ consistent 64x64 grid.
 
 ---
 
+## 🎬 PACK ANIMACIÓN — ilustraciones EN CAPAS (para movimientos propios)
+
+Para que las piezas se muevan de verdad (cursor recorriendo filas, lupa
+inspeccionando, Vox saltando solo) necesito cada ilustración partida en capas
+PNG transparentes. Yo las apilo y animo cada capa con CSS. **Usa la ilustración
+actual como referencia de estilo para que las capas calcen.**
+
+### A1. `rpp-card-base.png` — la tarjeta SIN cursor
+```
+…the same rounded feedback card as before (coral header with amber star and
+abstract text bars, three cream rows below with muted bars) but WITHOUT any
+cursor arrow. Exact same style, colors and angle. Transparent background.
+```
+### A2. `rpp-cursor.png` — el cursor SOLO
+```
+…only a chunky coral cursor arrow (#FF6A3D with darker outline), same style
+as the original card illustration, single object, transparent background.
+```
+→ Yo lo animo recorriendo las filas de arriba a abajo y haciendo "click".
+
+### B1. `ciencia-base.png` — científico SIN lupa
+```
+…the same coral scientist mascot (lab coat, glasses, teal bow tie) next to the
+same teal clipboard with checkmarks and bar chart, but WITHOUT the magnifying
+glass — his hand open/extended as if about to hold something. Same style,
+colors and composition. Transparent background.
+```
+### B2. `ciencia-lupa.png` — la lupa SOLA
+```
+…only the magnifying glass from the illustration: dark navy rounded frame,
+teal handle, glass with soft white reflections, same chunky style, single
+object, transparent background.
+```
+→ Yo la animo acercándose/alejándose del clipboard (inspeccionando).
+
+### C1. `progreso-props.png` — SOLO llama + trofeo + barras (sin Vox)
+```
+…the same composition but WITHOUT the mascot: chunky two-tone flame on the
+left, golden trophy with star on the right, rising bar chart with teal arrow
+behind, confetti dots. Leave empty space in the center. Same style. 
+Transparent background.
+```
+### C2. `progreso-vox.png` — Vox celebrando SOLO
+```
+…only the coral mascot celebrating with both arms up, closed happy eyes, open
+smile, amber tuft, cream belly — same pose as the original, single character,
+transparent background.
+```
+→ Vox salta con squash & stretch mientras los props se quedan en el piso.
+
 ## ✅ Ya tenemos (no generar)
 - `vox-base.png` — mascota saludando (hero y CTA final)
 - `la-sala.png` — los 4 oyentes juntos (hero; tiene labels en inglés, por eso

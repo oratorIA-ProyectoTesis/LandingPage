@@ -42,6 +42,8 @@ interface Feature {
   body: string
   image?: { src: string; alt: string }
   custom?: 'audience'
+  /** Character-coherent idle motion class (e.g. 'anim-hop'). */
+  motion?: string
 }
 
 const FEATURES: Feature[] = [
@@ -64,6 +66,7 @@ const FEATURES: Feature[] = [
     title: 'progreso que engancha',
     body: 'Rachas, aplausos y niveles por dimensión: practicar da ganas, no miedo. Y cuando estés listo, activa el modo desafío para que tu público suba la exigencia contigo.',
     image: { src: featureProgreso, alt: 'Vox celebrando con racha, trofeo y niveles subiendo' },
+    motion: 'anim-hop',
   },
 ]
 
@@ -83,7 +86,7 @@ export function Features() {
                 <AudienceGrid />
               </Lively>
             ) : feature.image ? (
-              <Lively>
+              <Lively motion={feature.motion}>
                 <img
                   src={feature.image.src}
                   alt={feature.image.alt}

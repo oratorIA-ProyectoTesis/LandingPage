@@ -9,6 +9,7 @@ export function Lively({
   className = '',
   delay = 0,
   sway = true,
+  motion,
 }: {
   children: ReactNode
   className?: string
@@ -16,6 +17,8 @@ export function Lively({
   delay?: number
   /** Keep the idle sway after entering. */
   sway?: boolean
+  /** Override idle motion with a character-coherent one (e.g. 'anim-hop'). */
+  motion?: string
 }) {
   const ref = useRef<HTMLDivElement>(null)
   const [seen, setSeen] = useState(false)
@@ -42,7 +45,13 @@ export function Lively({
       className={`${seen ? 'anim-pop' : 'anim-wait'} ${className}`}
       style={{ animationDelay: `${delay}ms` }}
     >
-      {sway ? <div className="idle-sway">{children}</div> : children}
+      {motion ? (
+        <div className={motion}>{children}</div>
+      ) : sway ? (
+        <div className="idle-sway">{children}</div>
+      ) : (
+        children
+      )}
     </div>
   )
 }
