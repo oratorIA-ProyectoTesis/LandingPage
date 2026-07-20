@@ -146,9 +146,6 @@ h4 {
     40px 40px,
     40px 40px,
     40px 40px;
-  /* fade the texture out toward the wavy edges so it never fights the waves */
-  mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, #000 55%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 85% 75% at 50% 50%, #000 55%, transparent 100%);
 }
 
 /* Infinite marquee for the mobile scenario strip */
