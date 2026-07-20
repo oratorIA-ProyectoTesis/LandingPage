@@ -37,9 +37,9 @@ export function Challenge() {
           <p className="font-display text-sm font-extrabold tracking-[0.3em] text-desafio uppercase [text-shadow:0_0_18px_rgba(255,194,77,0.45)]">
             Sube al escenario con
           </p>
-          <h2 className="font-display text-5xl font-extrabold text-white md:text-6xl">
+          <h2 className="font-display text-5xl font-extrabold text-white [text-shadow:0_0_26px_rgba(255,255,255,0.4)] md:text-6xl">
             MODO{' '}
-            <span className="text-desafio [text-shadow:0_0_32px_rgba(255,194,77,0.65),0_0_80px_rgba(255,194,77,0.35)]">
+            <span className="text-desafio [text-shadow:0_0_22px_rgba(255,194,77,0.95),0_0_60px_rgba(255,194,77,0.6),0_0_130px_rgba(255,178,62,0.4)]">
               DESAFÍO
             </span>
           </h2>
